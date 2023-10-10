@@ -25,3 +25,36 @@
 // 17.Prompt question asking if player wants to play again
 //    18. Yes: start game from step 1
 //    19. No: main screen
+
+// create an array for game words
+const gameWords = ["freezing", "snowball", "sledding", "penguins", "blizzard", "toboggan", "firewood", "flannels", "pinecone"]
+
+// create variable to store random word and letters
+let selectedWord = " ";
+let guessedLetters = [];
+
+// function to pick randomly from the array
+function getRandomWord() {
+    const numberSelector = Math.floor(Math.random() * gameWords.length);
+    return gameWords[numberSelector];
+}
+//create even listener for start button that picks a random word
+const startButton = document.getElementById("start");
+
+startButton.addEventListener('click', function(evt) {
+    selectedWord = getRandomWord();
+    evt.preventDefault();
+});
+
+// create event listener for the letters and function for event
+// const letters = document.querySelectorAll('.letter');
+// letters.forEach(function(letter) {
+//     letter.addEventListener('click', function(evt) {
+//         evt.preventDefault();
+//         console.log("clicked"); 
+//     });
+// });
+
+
+
+
