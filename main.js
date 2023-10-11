@@ -27,34 +27,64 @@
 //    19. No: main screen
 
 // create an array for game words
-const gameWords = ["freezing", "snowball", "sledding", "penguins", "blizzard", "toboggan", "firewood", "flannels", "pinecone"]
+const words = ["freezing", "snowball", "sledding", "penguins", "blizzard", "toboggan", "firewood", "flannels", "pinecone"]
 
 // create variable to store random word and letters
-let selectedWord = " ";
+let selectedWord = "";
 let guessedLetters = [];
 
-// function to pick randomly from the array
+// add function to pick randomly from the array
 function getRandomWord() {
-    const numberSelector = Math.floor(Math.random() * gameWords.length);
-    return gameWords[numberSelector];
+    const numberSelector = Math.floor(Math.random() * words.length);
+    return words[numberSelector];
+}
+
+// add function that displays the word as underscores
+
+function displayBlanks() {
+    const randomWord = getRandomWord();
+    const blanks = randomWord.replace(/[a-zA-Z]/g, "_");
+    document.getElementById("worddisplay").textContent = blanks;
 }
 //create even listener for start button that picks a random word
 const startButton = document.getElementById("start");
 
 startButton.addEventListener('click', function(evt) {
-    selectedWord = getRandomWord();
+    // selectedWord = getRandomWord();
+    // guessedLetters = [];
+    // addWordDisplay();
+    displayBlanks();
     evt.preventDefault();
+    console.log(selectedWord);
 });
 
-// create event listener for the letters and function for event
+// // add functions to add letters to word display 
+// const wordDisplay = document.getElementById("worddisplay");
+
+// function addWordDisplay() {
+//     const gameWord = selectedWord.split('').map(letter => {
+//         if (guessedLetters.includes(letter)) {
+//             return letter;
+//         } else {
+//             return '_';
+//         }
+//     }).join(' ');
+//     wordDisplay.textContent = gameWord;
+// }
+
+// function letterClick(evt) {
+//     const selectedLetter = evt.target.textContent;
+//     if (!guessedLetters.includes(selectedLetter)) {
+//         guessedLetters.push(selectedLetter);
+//         addWordDisplay();
+//     }
+// };
+// // create event clicker for each letter
+
 // const letters = document.querySelectorAll('.letter');
 // letters.forEach(function(letter) {
-//     letter.addEventListener('click', function(evt) {
-//         evt.preventDefault();
-//         console.log("clicked"); 
+//     letter.addEventListener('click', letterClick);
 //     });
-// });
-
 
 
 
