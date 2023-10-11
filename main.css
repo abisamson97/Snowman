@@ -5,10 +5,7 @@ body {
     grid-template-rows: 1fr 2fr 1fr;
 }
 h1 {
-    color: white;
-    /* background-color: black;
-    border: solid white 2px;
-    border-radius: 50%; */
+    color:white;
     margin: 0 0 100px 0;
     font-size: 80px; 
     font-family: 'Gloria Hallelujah', cursive;
@@ -56,12 +53,82 @@ h3 {
     justify-items: end;
 }
 #snowman {
+    position: relative;
     display: grid;
     grid-row: 2 / span 1;
     grid-column: 2 / span 1;
     justify-items: center;
     align-items: end;
+    margin-bottom: 20px;
 }
+#snowman > div {
+    position: absolute;
+}
+#head {
+    width: 150px;
+    height: 150px;
+    top: 180px;
+    left: 280px;
+    background-color: white;
+    border-radius: 50%;
+}
+#body {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+}
+#left-arm, #right-arm {
+    top: 280px;
+    width: 10px;
+    height: 100px;
+    background-color: brown;
+}
+#left-arm{
+    left: 220px;
+    transform: rotate(-45deg)
+}
+#right-arm{
+    right: 220px;
+    transform: rotate(45deg)
+}
+#left-eye, #right-eye {
+    top: 230px;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+#left-eye {
+    left: 318px;
+}
+#right-eye{
+    right: 320px;
+   
+}
+#nose {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 60px solid orange;
+    top: 235px;
+    right: 330px;
+    transform: rotate(90deg);
+}
+#button1, #button2 {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+#button1 {
+    top: 350px;
+}
+#button2 {
+    top: 400px;
+}
+
 button {
     background-color: transparent;
     border: none;
@@ -96,4 +163,14 @@ button {
   }
   .wrongletter {
     color: red;
+  }
+  .rightletter {
+    color: green;
+  }
+  #grass{
+    display: grid;
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    justify-items: center;
+    align-items: end;
   }

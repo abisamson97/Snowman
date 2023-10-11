@@ -27,7 +27,14 @@
 //    19. No: main screen
 
 // create an array for game words
-const words = ["freezing", "snowball", "sledding", "penguins", "blizzard", "toboggan", "firewood", "flannels", "pinecone"]
+const words = ["freezing", "snowball", "sledding", "penguin", "blizzard", "toboggan", "fireplace", "flannels", "pinecones", "snowflakes", "icicle" ]
+
+// create an array for snowman
+const bodyParts = [ "nose", "left-eye", "right-eye", "head", "left-arm", "right-arm", "button1", "button2", "body"];
+
+// add variables to keep track of guesses 
+const maxGuesses = 7;
+let incorrectGuesses = 0;
 
 // create variable to store random word and letters
 let selectedWord = "";
@@ -49,7 +56,6 @@ function displayBlanks() {
 }
 
 // add function that executes letter clicks
-
 function letterClick(evt) {
         const selectedLetter = evt.target.textContent.toLowerCase();
 
@@ -66,9 +72,16 @@ function letterClick(evt) {
 
             document.getElementById("worddisplay").textContent = gameWord;
 
-            // add statement to make letters turn red if incorrect
+            // add if statement to list events that will occur after guessing incorrect or correct
             if (!selectedWord.toLowerCase().includes(selectedLetter)){
                 evt.target.classList.add("wrongletter")
+                incorrectGuesses++;
+                if (incorrectGuesses <= maxGuesses){
+                    document.getElementById(bodyParts[incorrectGuesses - 1]).style.display = "none"
+                }
+            } else {
+                evt.target.classList.add("rightletter")
+
             }
         }
     };
