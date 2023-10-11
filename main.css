@@ -1,21 +1,32 @@
 body {
     background-color: rgb(0, 231, 252);
     display: grid;
-    grid-template-columns: 1fr 1fr 3fr 1fr;
+    grid-template-columns: 2fr 3fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
 }
 h1 {
     color: white;
-    background-color: black;
+    /* background-color: black;
     border: solid white 2px;
-    border-radius: 50%;
+    border-radius: 50%; */
+    margin: 0 0 100px 0;
     font-size: 80px; 
     font-family: 'Gloria Hallelujah', cursive;
     display: grid;
     grid-row: 1 / span 1;
-    grid-column: 3 / span 1;
+    grid-column: 1 / span 3;
+    align-items: start;
+    justify-items: center;
+}
+h3 {
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: grid;
+    margin: 50px 0 0 0;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 3;
     align-items: center;
-    justify-content: center;
+    justify-items: center;   
 }
 #alphabet {
     font-family: 'Gloria Hallelujah', cursive;
@@ -26,7 +37,7 @@ h1 {
     border: solid 2px;
     border-radius: 10% ;
     grid-row: 2 / span 1;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
 
 }
 #worddisplay {
@@ -34,19 +45,20 @@ h1 {
     font-size: 50px;
     display: grid;
     grid-row: 3 / span 1;
-    grid-column: 3 / span 1;
-    
+    grid-column: 2 / span 1;
+    align-items: center;
+    justify-content: center;
 }
 #sun {
     display: grid;
     grid-row: 2 / span 1;
-    grid-column: 3 / span 1;
+    grid-column: 2 / span 1;
     justify-items: end;
 }
 #snowman {
     display: grid;
     grid-row: 2 / span 1;
-    grid-column: 3 / span 1;
+    grid-column: 2 / span 1;
     justify-items: center;
     align-items: end;
 }
@@ -66,7 +78,7 @@ button {
     color: black;
     display: grid;
     grid-row: 1 / span 1;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
     justify-items: center;
     align-items: end;
   }
@@ -76,9 +88,12 @@ button {
     top: 210px;
     left: 150px;
     right: 1100px;
-    bottom: 450px;
+    bottom: 470px;
     border: 2px solid black;
     background-color: gray; /* Adjust the border style, color, and width as needed */
     pointer-events: none; /* Allows interactions to pass through the pseudo-element */
     z-index: -1; /* Place the pseudo-element behind the text */
+  }
+  .wrongletter {
+    color: red;
   }
