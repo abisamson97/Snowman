@@ -78,13 +78,27 @@ function letterClick(evt) {
                 incorrectGuesses++;
                 if (incorrectGuesses <= maxGuesses){
                     document.getElementById(bodyParts[incorrectGuesses - 1]).style.display = "none"
+                } else {
+                    endGame(false);
                 }
             } else {
                 evt.target.classList.add("rightletter")
 
+                if (!gameWord.includes("_")) {
+                    endGame(true);
+                }
             }
         }
     };
+
+//create function for end of game
+function endGame(winner) {
+    if (winner) {
+        document.getElementById("winner-message").style.display = "grid";
+    } else {
+        document.getElementById("loser-message").style.display = "grid";
+    }
+}
 
 // create event clicker for each letter
 
