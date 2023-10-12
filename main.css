@@ -37,7 +37,7 @@ h3 {
     grid-column: 1 / span 1;
 
 }
-#worddisplay {
+#word-display {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 50px;
     display: grid;
