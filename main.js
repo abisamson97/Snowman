@@ -1,33 +1,5 @@
-// Game Set Up
-// 1. Randomly select word/ phrase from array of choices 
-// 2. Variable to keep track of guessed letters
-// 3. Variable to keep track of incorrect guesses
-// 4. Max number of guesses 8
-// 5. Accept words or phrases in guess
-// 6. Display blanks for letters
-// 7. Display guessed letters off to the side 
-
-// Game Play
-// 5. if (incorrect guesses < max guesses)
-//    6. Prompt player to guess another letter
-//    7. Validate input is a letter or phrase:
-//    8. If it is an incorrect guess:
-//       9. Display an addition of snowman being added 
-//       10. Loop through steps 6-9
-// 11. if else (word/ phrase is guessed w/input)
-//    12. Notify player has won the game 
-// 13. else (incorrect guesses > max guesses)
-//    14. Display snowman completed
-//    15. Notify the player has lost the game
-
-// End of Game
-// 16. Display end of game screen
-// 17.Prompt question asking if player wants to play again
-//    18. Yes: start game from step 1
-//    19. No: main screen
-
 // create an array for game words
-const words = ["freezing", "snowball", "sledding", "penguin", "blizzard", "toboggan", "fireplace", "flannels", "pinecones", "snowflakes", "icicle" ]
+const words = ["freezing", "snowballs", "sledding", "penguin", "blizzard", "toboggan", "fireplace", "flannels", "pinecones", "snowflakes", "icicles" ]
 
 // create an array for snowman
 const bodyParts = [ "nose", "left-eye", "right-eye", "head", "left-arm", "right-arm", "button1", "button2", "body"];
@@ -47,7 +19,7 @@ function getRandomWord() {
 }
 
 // add function that displays the word as underscores
-// let wordDisplay = document.getElementById("word-display").textContent
+
 function displayBlanks() {
     selectedWord = getRandomWord();
     guessedLetters = [];
@@ -101,7 +73,9 @@ function endGame(gameWinner) {
     } else {
         loser.style.display = "grid";
     }
-}
+};
+
+// create function to reset game 
 const headElement = document.getElementById("head");
 const bodyElement = document.getElementById("body");
 const noseElement = document.getElementById("nose");
@@ -112,7 +86,7 @@ const rightArm = document.getElementById("right-arm");
 const buttonOne = document.getElementById("button1");
 const buttonTwo = document.getElementById("button2");
 const alphabet = document.querySelectorAll(".letter");
-// create function to reset game 
+
 function resetGame() {
     guessedLetters = [];
     selectedWord = "";
@@ -135,7 +109,6 @@ function resetGame() {
     }) 
 };
 
-
 // create event clicker for each letter
 
 const letters = document.querySelectorAll('.letter');
@@ -151,8 +124,6 @@ startButton.addEventListener('click', function(evt) {
     evt.preventDefault();
     console.log(selectedWord);
 });
-
-// displayBlanks();
 
 
 
