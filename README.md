@@ -15,6 +15,10 @@ Game in Progress
 
 End Game Screen
 
+## **Challenging Code**
+
+<img src="./images/Challenging Code.png">
+
 ## **Technologies Used**
 - HTML
 - CSS
