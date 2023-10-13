@@ -4,14 +4,14 @@
 Snowman is a game inspired by the classic game hangman. It has a winter theme, including winter related game words and a snowman in place of the hangman. Players begin by clicking the start button which will generate blanks for a word selected from a pre-generated list. Players have 9 chances to guess a letter and complete the word. Every time an incorrect letter is chosen a part of the snowman melts away. If the word is guessed a message is revealed informing the player, they have won. If the snowman melts fully before the word is guessed, the player is informed that the game is over, and they can try again. 
 
 ## **Game Display**
-<img src="./images/Main-Game-Screen.png">
+<img src="./images/Main Game Screen .png">
 Main Game Screen
 
-<img src="./images/Game-in-Progress.png">
+<img src="./images/Game in Progress.png">
 
 Game in Progress 
 
-<img src="./images/End-Game-Screen.png">
+<img src="./images/End Game Screen.png">
 
 End Game Screen
 
